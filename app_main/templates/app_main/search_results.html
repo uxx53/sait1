@@ -1,0 +1,12 @@
+<p>Поиск: <strong>{{ query }}</strong></p>
+
+{% if fio1 %}
+    <p>Найдено {{ fio1|length }} ФИО </p>
+    <ul>
+        {% for book in fio1 %}
+        <li>{{ book.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Пусто.</p>
+{% endif %}

@@ -1,0 +1,10 @@
+<h1>{{ question.name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'main1:vote' question.id %}" method="post">
+    <label for="choice{{ forloop.counter }}">{{ question.age }}</label><br />
+<input type="submit" value="Vote" />
+</form>
+
+

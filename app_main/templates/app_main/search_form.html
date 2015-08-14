@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Поиск</title>
+</head>
+<body>
+    {% if error %}
+        <p style="color: red;">Введите данные.</p>
+    {% endif %}
+    <form action="/images/" method="get">
+        <input type="text" name="q" title="Заголовок">
+        <input type="submit" value="Поиск">
+    </form>
+</body>
+</html>

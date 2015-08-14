@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'app_main/style.css' %}" />
+
+<h1 align="center">  Список ФИО   </h1>
+{% if fio_list %}
+    <ul>
+    {% for p in fio_list %}
+        <li><a href="{% url 'main1:index'%}{{ p.id }}">{{ p.name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
